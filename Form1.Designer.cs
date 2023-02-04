@@ -41,6 +41,7 @@
             this.DueDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CurrentPageLabel = new System.Windows.Forms.Label();
             this.PageListBox = new System.Windows.Forms.ListBox();
+            this.AddButton = new System.Windows.Forms.Button();
             this.CurrentPagePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,11 +169,23 @@
             this.PageListBox.TabIndex = 0;
             this.PageListBox.SelectedIndexChanged += new System.EventHandler(this.PageListBox_SelectedIndexChanged);
             // 
+            // AddButton
+            // 
+            this.AddButton.Enabled = false;
+            this.AddButton.Location = new System.Drawing.Point(12, 129);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(116, 33);
+            this.AddButton.TabIndex = 4;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.CurrentPagePanel);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.OutcomeButton);
@@ -200,5 +213,6 @@
         private TextBox NameInputTextBox;
         private Label NameLabel;
         private DateTimePicker DueDateTimePicker;
+        private Button AddButton;
     }
 }
